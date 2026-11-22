@@ -7,14 +7,14 @@ cask "mad-designer" do
   desc "Ad-hoc SQL query builder, visual report designer, and viewer"
   homepage "https://docs.everydayapps.com/macos.html"
 
-  depends_on macos: ">= :monterey"
   depends_on arch: :arm64
+  depends_on macos: :monterey
 
   app "MAD Designer.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/MAD Designer.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args: ["-dr", "com.apple.quarantine", "{{appdir}}/MAD Designer.app"]
   end
 
   zap trash: [

@@ -1,6 +1,6 @@
 cask "mad-designer" do
-  version "0.7.0"
-  sha256 "c175819cae0be7a31499ac3e85de5603fbe09b61466c63c7bcab07983af8a31b"
+  version "0.8.0"
+  sha256 "aaca5da0882484f2b4317fccada312886834448a43e8d680b12107930c033bb0"
 
   url "https://github.com/mthomason/MAD/releases/download/v#{version}/MAD-Designer-macOS.dmg"
   name "MAD Designer"
